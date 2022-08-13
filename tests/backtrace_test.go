@@ -14,3 +14,11 @@ func TestPermutation(t *testing.T) {
 
 	fmt.Printf("%#v\n", permutations)
 }
+
+func TestNQueen(t *testing.T) {
+	n := 4
+
+	results := backtrace.NQueens(n)
+
+	fmt.Printf("%#v\n", results)
+}
