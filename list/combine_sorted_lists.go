@@ -1,10 +1,5 @@
 package list
 
-type Node struct {
-	Value int
-	Next  *Node
-}
-
 func CombineSortedLists(a, b *Node) *Node {
 	dummy := Node{}
 	p := &dummy

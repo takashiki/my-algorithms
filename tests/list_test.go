@@ -44,3 +44,32 @@ func TestCombineSortedList(t *testing.T) {
 
 	assert.EqualValues(t, [5]int{1, 2, 3, 4, 5}, res)
 }
+
+func TestFindFromEnd(t *testing.T) {
+	node5 := list.Node{
+		Value: 5,
+	}
+
+	node4 := list.Node{
+		Value: 4,
+		Next:  &node5,
+	}
+
+	node3 := list.Node{
+		Value: 3,
+		Next:  &node4,
+	}
+
+	node2 := list.Node{
+		Value: 2,
+		Next:  &node3,
+	}
+
+	node1 := list.Node{
+		Value: 1,
+		Next:  &node2,
+	}
+
+	end2 := list.FindFromEnd(&node1, 2)
+	assert.EqualValues(t, 4, end2.Value)
+}
