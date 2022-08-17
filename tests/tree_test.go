@@ -36,10 +36,43 @@ func TestMoveLeft(t *testing.T) {
 		Left:  &node2,
 		Right: &node3,
 	}
-	
+
 	tree.MoveLeft(&root)
 
 	traverse(&root)
+}
+
+func TestLevelTraverse(t *testing.T) {
+	node6 := tree.Node{
+		Value: 6,
+	}
+
+	node5 := tree.Node{
+		Value: 5,
+		Right: &node6,
+	}
+
+	node4 := tree.Node{
+		Value: 4,
+	}
+
+	node2 := tree.Node{
+		Value: 2,
+		Right: &node5,
+	}
+
+	node3 := tree.Node{
+		Value: 3,
+		Right: &node2,
+	}
+
+	root := tree.Node{
+		Value: 1,
+		Left:  &node3,
+		Right: &node4,
+	}
+
+	tree.LevelTraverse(&root)
 }
 
 func traverse(root *tree.Node) {

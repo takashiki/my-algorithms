@@ -1,11 +1,5 @@
 package tree
 
-type Node struct {
-	Value int
-	Left  *Node
-	Right *Node
-}
-
 var nodeMatrix [][]*Node
 
 // 先遍历一遍按层数构建一个数组
