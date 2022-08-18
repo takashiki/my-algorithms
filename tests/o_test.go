@@ -69,3 +69,15 @@ func TestO1Stack(t *testing.T) {
 	assert.EqualValues(t, 3, d)
 	assert.EqualValues(t, 2, s.GetMin())
 }
+
+func TestBookMeeting(t *testing.T) {
+	aSchedule := [][]string{{"9:30", "10:30"}, {"12:00", "13:00"}, {"16:00", "18:00"}}
+	aWorkTime := []string{"9:00", "20:00"}
+	bSchedule := [][]string{{"10:00", "11:32"}, {"12:30", "14:30"}, {"14:30", "15:00"}, {"16:00", "17:00"}}
+	bWorkTime := []string{"10:00", "18:30"}
+	minutes := 30
+
+	available := o.BookMeeting(aSchedule, bSchedule, aWorkTime, bWorkTime, minutes)
+	fmt.Printf("%#v\n", available)
+	assert.EqualValues(t, [][]string{{"15:00", "16:00"}, {"18:00", "18:30"}}, available)
+}

@@ -74,11 +74,3 @@ func FindTheBlock(blocks []Block, needs []string) int {
 
 	return minimumIndex
 }
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-
-	return b
-}
