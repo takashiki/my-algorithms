@@ -73,3 +73,37 @@ func TestFindFromEnd(t *testing.T) {
 	end2 := list.FindFromEnd(&node1, 2)
 	assert.EqualValues(t, 4, end2.Value)
 }
+
+func TestInsertSortedList(t *testing.T) {
+	node5 := list.Node{
+		Value: 5,
+	}
+
+	node3 := list.Node{
+		Value: 3,
+	}
+
+	node1 := list.Node{
+		Value: 1,
+	}
+
+	node1.Next = &node3
+	node3.Next = &node5
+	node5.Next = &node1
+
+	n := 0
+	res1 := list.InsertSortedList(nil, n)
+	assert.EqualValues(t, n, res1.Value)
+
+	res2 := list.InsertSortedList(&node1, n)
+	p := res2
+	for {
+		fmt.Printf("%d\n", p.Value)
+		if res2.Value == p.Next.Value {
+			break
+		} else {
+			p = p.Next
+		}
+	}
+	assert.EqualValues(t, 0, res2.Value)
+}
