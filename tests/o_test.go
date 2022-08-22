@@ -81,3 +81,19 @@ func TestBookMeeting(t *testing.T) {
 	fmt.Printf("%#v\n", available)
 	assert.EqualValues(t, [][]string{{"15:00", "16:00"}, {"18:00", "18:30"}}, available)
 }
+
+func TestRemoveIslands(t *testing.T) {
+	input := [][]bool{
+		{true, false, false, false, false, false},
+		{false, true, false, true, true, true},
+		{false, false, true, false, true, false},
+		{true, true, false, false, true, false},
+		{true, false, true, true, false, false},
+		{true, false, false, false, false, true},
+	}
+
+	output := o.RemoveIslands(input)
+	for _, row := range output {
+		fmt.Printf("%#v\n", row)
+	}
+}
