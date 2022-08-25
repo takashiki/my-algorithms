@@ -25,3 +25,11 @@ func TestMinDistance(t *testing.T) {
 	minDistance = dp.MinDistance(s1, s2)
 	assert.EqualValues(t, 5, minDistance)
 }
+
+func TestLongestIncreasingList(t *testing.T) {
+	nums := []int{10, 9, 2, 5, 3, 7, 101, 18}
+	expected := 4
+
+	assert.EqualValues(t, expected, dp.LongestIncreasingList(nums))
+}
+

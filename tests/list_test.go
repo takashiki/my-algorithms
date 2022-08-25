@@ -5,6 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/takashiki/my-algorithms/common"
 	"github.com/takashiki/my-algorithms/list"
 )
 
@@ -106,4 +107,14 @@ func TestInsertSortedList(t *testing.T) {
 		}
 	}
 	assert.EqualValues(t, 0, res2.Value)
+}
+
+func TestReverseLinkedList(t *testing.T) {
+	list1 := common.BuildLinkedList([]int{1, 2, 3, 4, 5})
+	res1 := list.ReverseLinkedList(list1)
+	common.PrintLinkedList(res1)
+
+	list2 := common.BuildLinkedList([]int{1, 2, 3, 4, 5})
+	res2 := list.ReverseLinkedList2(list2)
+	common.PrintLinkedList(res2)
 }

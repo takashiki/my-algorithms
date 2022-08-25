@@ -97,3 +97,17 @@ func TestRemoveIslands(t *testing.T) {
 		fmt.Printf("%#v\n", row)
 	}
 }
+
+func TestLongestIdenticalList(t *testing.T) {
+	s := "abcabcbb"
+	expected := 3
+
+	assert.EqualValues(t, expected, o.LongestIdenticalList(s))
+}
+
+func TestMaxGcd(t *testing.T) {
+	nums := []int{789, 834, 980, 695, 1112}
+	expected := 139
+
+	assert.EqualValues(t, expected, o.MaxGcd(nums))
+}
