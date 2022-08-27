@@ -111,3 +111,10 @@ func TestMaxGcd(t *testing.T) {
 
 	assert.EqualValues(t, expected, o.MaxGcd(nums))
 }
+
+func TestAmicablePairs(t *testing.T) {
+	n := 5000
+	expected := [][]int{{284, 220}, {1210, 1184}, {2924, 2620}}
+	res := o.AmicablePair(n)
+	assert.EqualValues(t, expected, res)
+}
