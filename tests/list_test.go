@@ -118,3 +118,33 @@ func TestReverseLinkedList(t *testing.T) {
 	res2 := list.ReverseLinkedList2(list2)
 	common.PrintLinkedList(res2)
 }
+
+func TestStackList(t *testing.T) {
+	l := &list.StackList{}
+	l.Push(1)
+	l.Push(2)
+	r, ok := l.Pop()
+	fmt.Printf("%d,%t\n", r, ok)
+	r, ok = l.Pop()
+	fmt.Printf("%d,%t\n", r, ok)
+	r, ok = l.Pop()
+	fmt.Printf("%d,%t\n", r, ok)
+	l.Push(3)
+	l.Push(4)
+	r, ok = l.Pop()
+	fmt.Printf("%d,%t\n", r, ok)
+	l.Push(5)
+	l.Push(6)
+	r, ok = l.Pop()
+	fmt.Printf("%d,%t\n", r, ok)
+	l.Push(7)
+	l.Push(8)
+	r, ok = l.Pop()
+	fmt.Printf("%d,%t\n", r, ok)
+	r, ok = l.Pop()
+	fmt.Printf("%d,%t\n", r, ok)
+	r, ok = l.Pop()
+	fmt.Printf("%d,%t\n", r, ok)
+	r, ok = l.Pop()
+	fmt.Printf("%d,%t\n", r, ok)
+}
