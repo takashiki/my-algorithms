@@ -118,3 +118,15 @@ func TestAmicablePairs(t *testing.T) {
 	res := o.AmicablePair(n)
 	assert.EqualValues(t, expected, res)
 }
+
+func TestBinarySearch(t *testing.T) {
+	nums := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	target := 7
+	assert.EqualValues(t, target, o.BinarySearch(nums, target))
+}
+
+func TestReverseNumber(t *testing.T) {
+	num := 320
+	expected := 23
+	assert.EqualValues(t, expected, o.ReverseNumber(num))
+}
